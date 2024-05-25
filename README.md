@@ -73,6 +73,10 @@ This class generates a list of random queries where the number of queries is pro
 
 For generating a single query, the index is chosen randomly, if required the timestamp, type (BEFORE/AFTER) and error codes are chosen randomly.
 
+#### Test
+
+This class is just for testing the code, pipes input from an input file and pipes the output to the output file
+
 
 ## How to run
 
