@@ -1,7 +1,7 @@
 # OVERVIEW
 
 ### 1. Working Principle
-### 2. Class Definitions
+### 2. Class Descriptions
 ### 3. How to run
 
 
@@ -29,7 +29,7 @@ The approach supports aggregates within a random range, l to r, and is not restr
 Each inserted log entry changes a path of nodes from root to leaf. The length of such a path is O(log ( Long.MAX_VALUE )). Therefor the maximum memory is **O(log(Long.MAX_VALUE ) * NUM_ENTRIES)** where NUM_ENTRIES is the number of inserted log entries
 
 
-## Class Definitions
+## Class Descriptions
 
 #### SingleDataNode
 
