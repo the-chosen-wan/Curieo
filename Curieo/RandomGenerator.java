@@ -12,13 +12,14 @@ public class RandomGenerator {
     private static final float MAX_SEV = 100;
     private static final int DAYS_IN_FUTURE = 360;
 
+    
     private static final List<String> errorCodes = List.of(
         "INTERNAL_SERVER_ERROR",
         "BAD_REQUEST",
-        "SOMETHING",
-            "SOMETHING_ELSE",
-            "ABCD",
-            "EFGH"
+        "CLIENT_ERROR",
+            "NETWORK_ERROR",
+            "DB_CRASH",
+            "BUILDING_ON_FIRE"
     );
 
     private static final List<Character> queryIndices = List.of(
@@ -45,6 +46,7 @@ public class RandomGenerator {
         return errorCodes.get(randomIndex);
     }
 
+    //Random Errorcode
     private Character generateRandomIndex(){
         int randomIndex = random.nextInt(queryIndices.size());
         return queryIndices.get(randomIndex);

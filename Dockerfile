@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY . /app
 
-RUN javac Curieo/Test.java
+# RUN javac Curieo/Test.java
+RUN chmod +x /app/run.sh
 
-CMD ["java", "Curieo.Test"]
+# CMD ["java", "Curieo.Test"]
+ENTRYPOINT ["/app/run.sh"]

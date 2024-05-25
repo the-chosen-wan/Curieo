@@ -1,25 +1,41 @@
 package Curieo;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Test {
     
-    public static void main(String[] args){
-        // SegTree tree = new SegTree(0, Long.MAX_VALUE - 1);
-        // tree.insert(1212, "a", 25);
-        // tree.insert(121200, "b", 25);
-        // tree.insert(1212, "a", 500);
-        // tree.insert(121200, "a", 20);
-        // System.out.println(tree.querySpecificKey(0, 121199,"a"));
+    public static void main(String[] args) throws IOException{
         Logger log = new Logger();
-        // log.readFromFile("Curieo/input.txt", "Curieo/output.txt");
-        RandomGenerator rng = new RandomGenerator();
 
-        // System.out.println(rng.generateListQueries(100000));
-        List<String> queries = rng.generateListQueries(200);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        for(String q:queries){
-            System.out.println(log.queryHandler(q));
-        }
+        List<String> queries = new ArrayList<>();
+
+        String query;
+
+        while((query = br.readLine())!=null)
+            queries.add(query);
+        
+        List<String> outputs = new ArrayList<>();
+
+        for(String q: queries)
+            outputs.add(log.queryHandler(q));
+
+        for(String out: outputs)
+            System.out.println(out);
+
+        br.close();
+
+        // RandomGenerator rng = new RandomGenerator();
+
+        // List<String> queries = rng.generateListQueries(300);
+
+        // for(String q:queries){
+        //     System.out.println(q);
+        // }
     }
 }

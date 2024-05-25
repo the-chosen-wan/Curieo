@@ -36,6 +36,7 @@ public class SegTree {
         long mid = tl + (tr-tl)/2;
 
         if(ts<=mid){
+            //build left
             if(this.left == null){
                 this.left = new SegTree(tl, mid);
             }
@@ -43,6 +44,7 @@ public class SegTree {
         }
 
         else{
+            //build right
             if(this.right==null){
                 this.right = new SegTree(mid+1, tr);
             }
@@ -54,11 +56,11 @@ public class SegTree {
     }
 
     public void _queryAllKeys(long l, long r, AggregateDataNode result){
-        // System.out.println(tl +" " + tr);
         if(l>r){
             return;
         }
 
+        //entire range is required
         if(tl==l&&tr==r){
             result.generateNewNode(this.getData());
             return;
@@ -86,6 +88,7 @@ public class SegTree {
             return;
         }
 
+        //entire range is required
         if(tl==l&&tr==r){
             result.generateNewNode(this.data.getSingleDataNode(key));
             return;
