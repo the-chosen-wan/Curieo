@@ -1,4 +1,4 @@
-FROM openjdk:19
+FROM --platform=linux/amd64 openjdk:19
 
 WORKDIR /app
 
