@@ -17,6 +17,8 @@ The increasing order of the timestamps is not a necessity here, logs can be repl
 
 The approach supports aggregates within a random range, l to r, and is not restricted to prefixs (BEFORE) or suffixes (AFTER). This could be usedful to finding statistics within some event like an outage with a defined start and end time.
 
+Having tested with the RandomGenerator, this approach works well for a random list of 2e6 entries, facing OOM at 3e6
+
 ### Complexity
 
 #### a. Time Complexity
