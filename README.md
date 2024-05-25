@@ -90,7 +90,7 @@ output.txt will be generated in current working directory
 
 ### Running docker image
 
-The docker daemon should be up and running
+The docker daemon should be up and running, the docker image has been pushed to public dockerhub registry
 
 ```bash
 
