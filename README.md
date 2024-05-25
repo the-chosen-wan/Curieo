@@ -39,7 +39,7 @@ This is a data node which contains the data values for each error code. Has fiel
 
 #### AggregateDataNode
 
-This the the node that is present in the nodes of the Segment Tree. This contains a map with error codes as key and SingleDataNodes and values. Contains methods to add a key and SingleDataNode as well as merge two AggregateDataNode. This merging is required in the Segment Tree
+This the the node that is present in the nodes of the Segment Tree. This contains a map with error codes as key and SingleDataNodes as values. Contains methods to add a key and SingleDataNode,  as well as merge two AggregateDataNode. This merging is required in the Segment Tree.
 
 #### SegTree
 
