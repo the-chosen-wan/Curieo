@@ -41,7 +41,7 @@ public class Logger {
     private String computeAggregate(AggregateDataNode node){
 
         if(node.isEmpty())
-            return "Min: " + 0.0 + " Max: " + 0.0 + " Mean " + 0.0;
+            return "Min: " + 0.0 + " Max: " + 0.0 + " Mean: " + 0.0;
         
         float max = Float.MIN_VALUE;
         float min = Float.MAX_VALUE;
@@ -58,15 +58,15 @@ public class Logger {
         }
 
         float average = sum/count;
-        return "Min: " + min + " Max: " + max + " Mean " + average;
+        return "Min: " + min + " Max: " + max + " Mean: " + average;
     }
 
     private String computeAggregate(SingleDataNode node){
         if(Math.abs(Float.compare(node.getMax(), Float.MIN_VALUE))< Logger.EPSILON)
-            return "Min: " + 0.0 + " Max: " + 0.0 + " Mean " + 0.0;
+            return "Min: " + 0.0 + " Max: " + 0.0 + " Mean: " + 0.0;
         
         float average = node.getSum()/ node.getCount();
-        return "Min: " + node.getMin() + " Max: " + node.getMax() + " Mean " + average;
+        return "Min: " + node.getMin() + " Max: " + node.getMax() + " Mean: " + average;
     }
 
     private String query(String query){
